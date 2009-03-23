@@ -1,0 +1,43 @@
+<job id="searcher">
+	<script language="VBScript" src="searcher.vbs"/>						
+	'Einbinden externer Funktionen ( filter.vbs), actions
+	<script language="VBScript">
+		dim objArgs, fso, sh, env, net
+
+		Set parm = WScript.Arguments
+
+		Set fso = CreateObject("Scripting.FileSystemObject")
+		Set sh = CreateObject("Wscript.Shell")
+		Set env = sh.Environment("PROCESS")
+		Set net = CreateObject ("WScript.Network")
+		
+		dim i	'Anzahl der übergebenen Parameter
+		dim verz,erw,bef,sucht,ersetzt
+		dim globdate,globuser,globresult
+		dim debug, parm
+
+		dim recursive
+		recursive = false
+
+		dim followlinks
+		followlinks = true
+		dim lastfullpath
+		
+		'Set parm = WScript.Arguments
+		
+		debug = 3
+
+		REM startordner, recursive 0/1, filter, action, parameters..., parameters, ...
+		rem c:\daten_lokal, regex, *.lnk, "LNKREPL",
+
+
+		Call basefunction ()
+
+
+		set fso = nothing
+		set net = nothing
+		set env = nothing
+		set sh = nothing
+
+	</script>
+</job>
