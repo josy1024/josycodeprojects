@@ -110,7 +110,7 @@ while (numTracks != 0)
 			
 			
 		}
-		if ((numTracks % 1000) == 0)
+		if (((numTracks % 1000) == 0) && (currTrack.Location != ""))
 		{
 		// just for info, that script is doing something
 		WScript.Echo (numTracks + ": INF: " + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
