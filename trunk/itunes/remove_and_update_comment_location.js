@@ -53,6 +53,10 @@ var	deletedTracks = 0;
 var	mainLibrary = iTunesApp.LibraryPlaylist;
 var	tracks = mainLibrary.Tracks;
 var	numTracks = tracks.Count;
+var tracklocation = "";
+var trackexclude = "E:\\STORE\\AUDIO\\"
+
+
 var	i;
 
 while (numTracks != 0)
@@ -73,6 +77,16 @@ while (numTracks != 0)
 		}
 		else
 		{
+			tracklocation= currTrack.Location;
+			
+			if (String(trackexclude).length < String(tracklocation).length) 
+			{
+				if (trackexclude == Left(tracklocation, String(trackexclude).length))
+				{
+					tracklocation = "";
+				}
+			}
+			
 			//currTrack.UpdateInfoFromFile();
 			if (currTrack.Podcast == true)
 			{
@@ -87,9 +101,9 @@ while (numTracks != 0)
 				//currTrack.UpdateInfoFromFile();
 				// currTrack.Comment = currTrack.rating + "; " + currTrack.Location + "; " + currTrack.PlayedCount;
 		
-				if (currTrack.Comment != currTrack.rating + "; " + currTrack.Location)
+				if (currTrack.Comment != currTrack.rating + "; " + tracklocation)
 				{
-					currTrack.Comment = currTrack.rating + "; " + currTrack.Location
+					currTrack.Comment = currTrack.rating + "; " + tracklocation
 					//WScript.Echo (numTracks + ": MP2L: " + currTrack.Location + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
 				}
 
@@ -101,16 +115,16 @@ while (numTracks != 0)
 			// noupdate ..
 			currTrack.UpdateInfoFromFile();
 			//update comment with rating and location
-			if (currTrack.Comment != currTrack.rating + "; " + currTrack.Location)
+			if (currTrack.Comment != currTrack.rating + "; " + tracklocation)
 				{
-					currTrack.Comment = currTrack.rating + "; " + currTrack.Location
+					currTrack.Comment = currTrack.rating + "; " + tracklocation
 					//WScript.Echo (numTracks + ": MP2L: " + currTrack.Location + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
 				}
 			}
-			
+		// WScript.Echo (numTracks + tracklocation);
 			
 		}
-		if (((numTracks % 1000) == 0) && (currTrack.Location != ""))
+		if (((numTracks % 1000) == 0) && (tracklocation != ""))
 		{
 		// just for info, that script is doing something
 		WScript.Echo (numTracks + ": INF: " + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
@@ -135,4 +149,13 @@ if (deletedTracks > 0)
 else
 {
 	WScript.Echo("No dead tracks were found.");
+}
+
+function Left(str, n){
+	if (n <= 0)
+	    return "";
+	else if (n > String(str).length)
+	    return str;
+	else
+	    return String(str).substring(0,n);
 }
