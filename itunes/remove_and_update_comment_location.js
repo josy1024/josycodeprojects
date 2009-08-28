@@ -55,6 +55,8 @@ var	tracks = mainLibrary.Tracks;
 var	numTracks = tracks.Count;
 var tracklocation = "";
 var trackexclude = "E:\\STORE\\AUDIO\\"
+var aboveratingupdate = 1;
+var rating = "";
 
 
 var	i;
@@ -85,6 +87,17 @@ while (numTracks != 0)
 				{
 					tracklocation = "";
 				}
+				else
+				{
+					tracklocation = "; " + tracklocation
+				}
+				
+			}
+			
+			rating = currTrack.rating
+			if (rating == 0) 
+			{ 
+				rating = ""
 			}
 			
 			//currTrack.UpdateInfoFromFile();
@@ -97,13 +110,13 @@ while (numTracks != 0)
 			// mp2 tracks specals
 			
 				// uncomment this to update files with "mp2" found in name
-				
 				//currTrack.UpdateInfoFromFile();
 				// currTrack.Comment = currTrack.rating + "; " + currTrack.Location + "; " + currTrack.PlayedCount;
-		
-				if (currTrack.Comment != currTrack.rating + "; " + tracklocation)
+				
+
+				if (currTrack.Comment !=  rating + tracklocation)
 				{
-					currTrack.Comment = currTrack.rating + "; " + tracklocation
+					currTrack.Comment = rating + tracklocation
 					//WScript.Echo (numTracks + ": MP2L: " + currTrack.Location + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
 				}
 
@@ -113,11 +126,11 @@ while (numTracks != 0)
 			else
 			{
 			// noupdate ..
-			currTrack.UpdateInfoFromFile();
+			// currTrack.UpdateInfoFromFile();
 			//update comment with rating and location
-			if (currTrack.Comment != currTrack.rating + "; " + tracklocation)
+			if (currTrack.Comment != rating + tracklocation)
 				{
-					currTrack.Comment = currTrack.rating + "; " + tracklocation
+					currTrack.Comment = rating +  tracklocation
 					//WScript.Echo (numTracks + ": MP2L: " + currTrack.Location + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
 				}
 			}
