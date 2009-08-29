@@ -1,0 +1,34 @@
+## zu search2album.js
+## keywords beginnen mit einem #
+# playlist: radiohead bestof cd 1
+# searchalways: radiohead
+Just
+Paranoid Android
+Karma Police
+Creep
+No Surprises
+High and Dry
+My Iron Lung
+There There
+Lucky
+Fake Plastic Trees
+Idioteque
+2+2 = 5
+The Bends
+Pyramid Song
+Street Spirit (Fade Out)
+Everything In Its Right Place
+# playlist: radiohead bestof cd 2
+Airbag
+I Might Be Wrong
+Go To Sleep
+Let Down
+Planet Telex
+Exit Music (For A Film)
+The National Anthem
+Knives Out
+Talk Show Host
+You
+Anyone Can Play Guitar
+How To Disappear Completely
+True Love Waits
