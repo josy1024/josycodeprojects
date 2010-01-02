@@ -1,5 +1,5 @@
-' order nach ordnergröße umbennen.
-' version: 2008_04_27
+' placeholder = "_"
+' version: 2010_02_01
 '  USAGE: cscript /nologo size2foldername.vbs foldername level
 ' debug = 1 (anzeigen)
 ' debug = 0 (umbenennen)
@@ -128,6 +128,10 @@ function rename2foldersize (filename, size)
 
 	dim target, prog
 	dim tsplit
+	dim placeholder
+	dim fileto
+	
+	placeholder = "_"
 	
 	if (instr(1, filename, "(") > 0) then
 		tsplit=split (filename, "(")
@@ -135,10 +139,13 @@ function rename2foldersize (filename, size)
 	else
 		target=filename
 	end if
-	
-		prog = "%comspec% /C move """  & filename & """ """ & target & "(" & friendlybytes(size) &")" & """"
-		if debug >= 0 then wscript.echo prog
-		if debug = 0 then  sh.Run prog, 0, True
+		
+		fileto = target & placeholder & "(" & friendlybytes(size) &")" 
+		if filename <> fileto then
+			prog = "%comspec% /C move """  & filename & """ """ & fileto & """"
+			if debug >= 0 then wscript.echo prog
+			if debug = 0 then  sh.Run prog, 0, True
+		end if
 		
 end function
 
