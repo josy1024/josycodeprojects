@@ -46,6 +46,9 @@
     Copyright © 2004 Apple Computer, Inc., All Rights Reserved 
 */ 
 
+var feature_enable_remove_dead_tracks = true;
+
+// var feature_enable_remove_dead_tracks = false;
 
 var ITTrackKindFile	= 1;
 var	iTunesApp = WScript.CreateObject("iTunes.Application");
@@ -54,9 +57,10 @@ var	mainLibrary = iTunesApp.LibraryPlaylist;
 var	tracks = mainLibrary.Tracks;
 var	numTracks = tracks.Count;
 var tracklocation = "";
-var trackexclude = "E:\\STORE\\AUDIO\\"
+var trackexclude = "X:\\AUDIO\\"
 var aboveratingupdate = 1;
 var rating = "";
+
 
 
 var	i;
@@ -74,7 +78,10 @@ while (numTracks != 0)
 		{
 			// yes, delete it
 			WScript.Echo (numTracks + ": DEL: " + currTrack.Artist +" - " + currTrack.Album +" - "+ currTrack.Name);
-			currTrack.Delete();
+			if (feature_enable_remove_dead_tracks) 
+			{
+				currTrack.Delete();
+			}
 			deletedTracks++;
 		}
 		else
@@ -150,6 +157,7 @@ while (numTracks != 0)
 
 if (deletedTracks > 0)
 {
+	if (!feature_enable_remove_dead_tracks) {WScript.Echo("Keeping dead tracks, just for information.");}
 	if (deletedTracks == 1)
 	{
 		WScript.Echo("Removed 1 dead track.");
