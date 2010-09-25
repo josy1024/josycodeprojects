@@ -30,7 +30,7 @@ REM ' subfunctions: mdwithcheck (make directory with check if exists)
 @call :mdwithcheck %target%\mpg
 
 REM ordner mit struktur X:\VIDEOS_UNSORTED\filmordner\filmdatei.avi
-call :dirvideocheck "X:\VIDEOS_UNSORTED"
+call :dirvideocheck "X:\VIDEO_SORTED\_unsorted"
 
 REM ordner mit struktur source\kategorie\filmordner
 for /D %%i in (%source%\*) do call :dirvideocheck %%i
@@ -45,6 +45,10 @@ GOTO:EOF
 
 :videocheck
 SET video=""
+FOR %%k IN ("%*"\*.mp*) DO (
+@REM echo %%k
+SET video="mpg"
+)
 FOR %%k IN ("%*"\*.mp4) DO (
 @REM echo %%k
 SET video="mp4"
@@ -56,10 +60,6 @@ SET video="m4v"
 FOR %%k IN ("%*"\*.avi) DO (
 @REM echo %%k
 SET video="avi"
-)
-FOR %%k IN ("%*"\*.mp*) DO (
-@REM echo %%k
-SET video="mpg"
 )
 FOR %%k IN ("%*"\*.mpeg) DO (
 @REM echo %%k
