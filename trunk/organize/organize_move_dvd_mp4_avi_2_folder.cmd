@@ -17,7 +17,7 @@ REM ' subfunctions: mdwithcheck (make directory with check if exists)
 @ECHO OFF
 @set source=F:\VIDEO
 @set source=F:\VIDEO_TEMP
-@set target=F:\VIDEO_SORTED
+@set target=X:\VIDEO_SORTED
 @set wetrun=0
 @set wetrun=1
 
@@ -29,6 +29,7 @@ REM ' subfunctions: mdwithcheck (make directory with check if exists)
 @call :mdwithcheck %target%\dvd
 @call :mdwithcheck %target%\mpg
 
+call :videocheck "X:\STREAMING_MP4_METADATA"
 
 
 for /D %%i in (%source%\*) do call :Subroutine %%i
