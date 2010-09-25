@@ -29,12 +29,13 @@ REM ' subfunctions: mdwithcheck (make directory with check if exists)
 @call :mdwithcheck %target%\dvd
 @call :mdwithcheck %target%\mpg
 
-call :videocheck "X:\STREAMING_MP4_METADATA"
+REM ordner mit struktur X:\VIDEOS_UNSORTED\filmordner\filmdatei.avi
+call :dirvideocheck "X:\VIDEOS_UNSORTED"
 
-
-for /D %%i in (%source%\*) do call :Subroutine %%i
+REM ordner mit struktur source\kategorie\filmordner
+for /D %%i in (%source%\*) do call :dirvideocheck %%i
 GOTO:EOF
-:Subroutine
+:dirvideocheck
 FOR /D %%j IN (%*\*) DO (
 @echo %%j
 call :videocheck %%j
