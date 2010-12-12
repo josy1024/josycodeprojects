@@ -1,6 +1,9 @@
 ' author: modified by: josy1024 http://code.google.com/u/josy1024/
 ' codebase: http://code.google.com/p/josycodeprojects/
-' date: 2009_03_19
+' URL: $URL$
+' Author: $Author$
+' Rev: $Rev$ ($Rev: $)
+' LastChangedDate: $LastChangedDate$
 
 first = true
 fullname = ""
