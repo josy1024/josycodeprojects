@@ -2,8 +2,10 @@
 ' codebase: http://code.google.com/p/josycodeprojects/
 ' URL: $URL$
 ' Author: $Author$
-' Rev: $Rev$ ($Rev: $)
+' Rev: $Rev$ ($Rev$)
 ' LastChangedDate: $LastChangedDate$
+' $Id$
+
 
 first = true
 fullname = ""
