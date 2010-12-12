@@ -3,8 +3,10 @@
 '  USAGE: cscript /nologo size2foldername.vbs foldername level
 ' debug = 1 (anzeigen)
 ' debug = 0 (umbenennen)
-' Author: Ing. Josef Lahmer alias josy1024
-' develcode: http://code.google.com/p/josycodeprojects/
+'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
 ' known bugs fehler mit ' im ordnername
 
 

@@ -3,6 +3,10 @@
     feature: update comment with rating and location
     codebase: http://code.google.com/p/josycodeprojects/
 
+'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
 
     ORIGINAL File: RemoveDeadTracks.js 
      

@@ -4,7 +4,11 @@
 	modified by: josy1024 http://code.google.com/u/josy1024/
 	features: create a itunes playlist by searching in tracklist.txt file
 	codebase: http://code.google.com/p/josycodeprojects/
-	
+
+	'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
 	
 */
 

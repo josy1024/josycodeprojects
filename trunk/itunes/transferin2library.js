@@ -3,6 +3,12 @@
     feature: transfers files referring out of libary to libary folder ...
     codebase: http://code.google.com/p/josycodeprojects/
 
+'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
+
+	
 usage: run and then cleanup with deleteme.cmd  
 
 script //NOLOGO transferin2library.js > deleteme.cmd

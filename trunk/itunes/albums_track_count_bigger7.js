@@ -6,6 +6,11 @@ original Script by Otto - http://ottodestruct.com
 modified by: josy1024 http://code.google.com/u/josy1024/
 codebase: http://code.google.com/p/josycodeprojects/
 
+'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
+
  */
 
 // put your playlist name here
