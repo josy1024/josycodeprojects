@@ -5,6 +5,11 @@
 	feature: add a track by location, generate a delete list for the added file
 	codebase: http://code.google.com/p/josycodeprojects/
 	
+'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
+
 */
 
 

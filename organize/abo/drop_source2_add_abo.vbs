@@ -1,10 +1,9 @@
 ' author: modified by: josy1024 http://code.google.com/u/josy1024/
 ' codebase: http://code.google.com/p/josycodeprojects/
-' URL: $URL$
-' Author: $Author$
-' Rev: $Rev$ ($Rev$)
-' LastChangedDate: $LastChangedDate$
-' $Id$
+'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
 
 
 first = true
