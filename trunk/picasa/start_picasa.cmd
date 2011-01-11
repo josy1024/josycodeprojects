@@ -5,7 +5,7 @@
 @REM references: http://www.google.com/support/forum/p/Picasa/thread?tid=24cf6c67b8a9da19&hl=en
 
 
-@echo off
+::@echo off
 :: GET CONFIG'S IF NOT FOUND
 @SET CONFIG=config.cmd
 if not exist %CONFIG% copy defaults\%CONFIG% .
@@ -22,10 +22,10 @@ set PICASAPROFILEPATH=%dbvol%\PICASADB
 
 IF NOT EXIST %DBVOL% net use %DBVOL% %DBSHARE% /persistent:no
 
-@echo OFF
+:: @echo OFF
 
-IF EXIST "C:\Programme\Google\Picasa3\" set PICASAEXECPATH=C:\Programme\Google\Picasa3\
-IF EXIST "C:\Program Files (x86)\Google\Picasa3" set PICASAEXECPATH="C:\Program Files (x86)\Google\Picasa3"
+IF EXIST "C:\Programme\Google\Picasa3\" set PICASAEXECPATH=C:\Programme\Google\Picasa3
+IF EXIST "C:\Program Files (x86)\Google\Picasa3\" set PICASAEXECPATH=C:\Program Files (x86)\Google\Picasa3
 set TEMPPATH="%PICASAPROFILEPATH%\Appdata\Local"
 IF NOT EXIST %TEMPPATH% mkdir %TEMPPATH%
 IF NOT EXIST %TEMPPATH% GOTO NoValidPath
@@ -44,10 +44,9 @@ echo Picasa was started by %USERNAME% at %date% %time% on computer %COMPUTERNAME
 echo This window just needs to keep standing here as long as you are working with picasa... once you close picasa, it will close as well...
 echo.
 echo You are running picasa with the picasa database located in %PICASAPROFILEPATH%
-set TEMPPATH="%PICASAEXECPATH%"
+set TEMPPATH=%PICASAEXECPATH%
 IF NOT EXIST "%TEMPPATH%" GOTO NoValidPath
 cd "%TEMPPATH%"
-pause
 "%PICASAEXECPATH%\picasa3.exe"
 del %LOCKFILE%
 GOTO EOF
