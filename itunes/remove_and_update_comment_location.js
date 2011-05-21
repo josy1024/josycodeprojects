@@ -61,7 +61,7 @@ var	mainLibrary = iTunesApp.LibraryPlaylist;
 var	tracks = mainLibrary.Tracks;
 var	numTracks = tracks.Count;
 var tracklocation = "";
-var trackexclude = "X:\\AUDIO\\"
+var trackexclude = "E:\\AUDIO\\"
 var aboveratingupdate = 1;
 var rating = "";
 
