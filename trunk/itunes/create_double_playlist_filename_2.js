@@ -5,10 +5,10 @@
 	features: create a itunes playlist by searching in tracklist.txt file
 	codebase: http://code.google.com/p/josycodeprojects/
 
-	'  $URL: https://josycodeprojects.googlecode.com/svn/trunk/itunes/search2album.js $
-'  $Author: josy1024@gmail.com $
-'  $Rev: 22 $ 
-'  $LastChangedDate: 2010-12-12 23:09:19 +0100 (So, 12 Dez 2010) $
+	'  $URL$
+'  $Author$
+'  $Rev$ 
+'  $LastChangedDate$
 	
 */
 
