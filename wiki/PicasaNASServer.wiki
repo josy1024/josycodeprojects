@@ -1,4 +1,5 @@
 #summary picasa mit NAS und zentraler DB
+#labels Featured,Phase-Deploy
 
 = einleitung =
 
