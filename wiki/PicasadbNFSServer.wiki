@@ -1,9 +1,9 @@
-#summary One-sentence summary of this page.
+#summary picasa mit NAS und zentraler DB
 #labels Featured,Phase-Deploy
 
 = einleitung =
 
-wie nutze ich das starte_picasa auf nfs server script?
+wie nutze ich das starte_picasa auf nas server script?
 
 == vorbereitungen ==
 * picasa 3 installiert und bestehende bildumgebung
@@ -17,6 +17,11 @@ wie nutze ich das starte_picasa auf nfs server script?
 
 * das script mapped entweder e:\ vom netzwerk und startet dann picasa so, damit die datenbank über e:\picasadb läuft.
 
-== datenbank transferieren ==
+== ablauf ==
+=== umgebung vorbereiten ===
+* share einrichte, 
+=== datenbank transferieren ===
 den inhalt von c:\users\#username#\AppData\Local\Google\Picasa2* auf den nfs-share kopieren
 
+=== script anpassen ===
+* http://code.google.com/p/josycodeprojects/source/browse/trunk/picasa/start_picasa.cmd
