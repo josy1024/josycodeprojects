@@ -59,7 +59,7 @@ function copyfromto (fromdir, basedir)
 	todir = basedir & "\" & todir
 	log = basedir & "\" & basename (fromdir) & ".log"
 '	Wscript.Stdout.Write
-	wscript.echo	fromdir 
+	if debugme > 1 then wscript.echo	fromdir 
 '	prog = "%comspec% /C " & GET_SCRIPT_Verzeichnis & "robocopy.exe """ & fromdir & """ """ & todir & """ " & ROPTS & " > """ & log & """"
 ' UPGRADE: use system integrated robocopy
 	prog = "%comspec% /C ""robocopy.exe """ & fromdir & """ """ & todir & """ " & ROPTS & " > """ & log & """"
