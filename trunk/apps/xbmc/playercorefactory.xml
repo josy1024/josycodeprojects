@@ -1,0 +1,29 @@
+<playercorefactory>
+ <players>
+   <player name="vlc" type="ExternalPlayer" audio="false" video="true">
+     <filename>/Applications/VLC.app/Contents/MacOS/VLC</filename>
+     <args>"{1}" -f</args>
+     <hidexbmc>true</hidexbmc>
+     <hideconsole>false</hideconsole>
+     <warpcursor>none</warpcursor>
+   </player>
+   <player name="openfolder" type="ExternalPlayer" audio="false" video="true">
+     <filename>/usr/bin/open</filename>
+     <args>`/usr/bin/dirname "{1}"`</args>
+     <hidexbmc>true</hidexbmc>
+     <hideconsole>false</hideconsole>
+     <warpcursor>none</warpcursor>
+   </player>
+  <player name="mplayer" type="ExternalPlayer" audio="false" video="true">
+     <filename>/Applications/MplayerX.app/Contents/MacOS/MPlayerX</filename>
+     <args>"{1}"</args>
+     <hidexbmc>true</hidexbmc>
+     <hideconsole>false</hideconsole>
+     <warpcursor>none</warpcursor>
+   </player>
+ </players>
+ <rules action="prepend">
+   <rule filetypes="wtv" filename=".*" player="vlc"/>
+   <rule filetypes="ts" filename=".*" player="vlc"/>
+ </rules>
+</playercorefactory>
